@@ -4,6 +4,9 @@
 # Para los archivos innecesarios de Microsoft Office
 ~$*.doc*
 Backup of *.doc*
+~$*.xls*
+*.xlk
+Backup of *.xls*
 Plantilla.docx
 
 # Extras desconocidos
