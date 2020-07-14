@@ -8,37 +8,50 @@
     android:backgroundTint="@color/colorPrimary"
     tools:context=".MainStreaming">
 
-    <RelativeLayout
-        android:id="@+id/divReproductor"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-        android:layout_width="424dp"
-        android:layout_height="111dp"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="675dp"
-        android:background="#3C4C49"
-        android:backgroundTint="@color/colorAccent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="380dp"
+        android:layout_height="441dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="BottomAppBar" />
+        app:layout_constraintVertical_bias="0.865" />
 
-    <ImageView
-        android:id="@+id/imgCancionRepro"
-        android:layout_width="114dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="2dp"
-        android:background="@color/colorSecond"
-        android:contentDescription="@string/appbar_scrolling_view_behavior"
+    <RelativeLayout
+        android:id="@+id/bottomAppBar2"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="452dp"
+        android:layout_height="154dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimaryDark"
+        android:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/divReproductor"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/divReproductor"
-        app:layout_constraintTop_toTopOf="@+id/divReproductor"
-        app:layout_constraintVertical_bias="0.75"
-        tools:srcCompat="@drawable/logo" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" >
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="185dp"
+            android:layout_height="142dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="269dp"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/logo" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/txtTituloCancionRepro"
@@ -49,64 +62,40 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="182dp"
+        android:layout_height="49dp"
+        android:text="Canciones"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toEndOf="@+id/imgCancionRepro"
-        app:layout_constraintTop_toTopOf="@+id/divReproductor"
-        app:layout_constraintVertical_bias="0.924" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="266dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="52dp"
-        android:scaleY="2.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/divReproductor"
-        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divReproductor"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
 
-    <Button
-        android:id="@+id/btnPlayRepro"
-        android:layout_width="45dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="255dp"
-        android:layout_marginEnd="125dp"
-        android:layout_marginBottom="65dp"
-        android:background="@android:drawable/ic_media_play"
-        app:layout_constraintBottom_toBottomOf="@+id/divReproductor"
-        app:layout_constraintEnd_toEndOf="@+id/divReproductor"
-        app:layout_constraintStart_toStartOf="@+id/divReproductor"
-        app:layout_constraintTop_toTopOf="@+id/divReproductor"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnBackRepro"
-        android:layout_width="44dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginEnd="203dp"
-        android:layout_marginBottom="65dp"
-        android:background="@android:drawable/ic_media_previous"
-        app:layout_constraintBottom_toBottomOf="@+id/divReproductor"
-        app:layout_constraintEnd_toEndOf="@+id/divReproductor"
-        app:layout_constraintStart_toStartOf="@+id/divReproductor"
-        app:layout_constraintTop_toTopOf="@+id/divReproductor" />
-
-    <Button
-        android:id="@+id/btnNextRepro"
-        android:layout_width="56dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="335dp"
-        android:layout_marginEnd="32dp"
-        android:background="@android:drawable/ic_media_next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/divReproductor"
-        app:layout_constraintStart_toStartOf="@+id/divReproductor"
-        app:layout_constraintTop_toTopOf="@+id/divReproductor"
-        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="182dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="53dp"
+        android:text="Streaming"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar2"
+        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bottomAppBar2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
